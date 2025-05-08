@@ -98,7 +98,7 @@ def main():
         if args.models == "openai_api":
             config["is_openai_api"] = True
             modified = True
-        else:
+        elif args.models == "ollama":
             config["is_openai_api"] = False
             modified = True
 
@@ -112,14 +112,11 @@ def main():
         if args.api_key:
             config["models"][models]["api_key"] = args.api_key
             modified = True
-        if args.name:
-            config["models"][models]["model_name"] = args.name
+        if args.model_name:
+            config["models"][models]["model_name"] = args.model_name
             modified = True
         if args.base_url:
             config["models"][models]["base_url"] = args.base_url
-            modified = True
-        if args.base_url:
-            config["models"][models]["api_key"] = args.api_key
             modified = True
         if modified:
             save_config(config)
