@@ -1,0 +1,8 @@
+*.pyc
+*.json
+!config.example.json
+/build
+/.idea
+/.pytest_cache
+/dist
+/llm_cli_lite.egg-info

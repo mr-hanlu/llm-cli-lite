@@ -1,0 +1,15 @@
+{
+  "is_openai_api": true,
+  "models": {
+    "ollama": {
+      "base_url": "http://localhost:11434",
+      "model_name": "qwen3-7b",
+      "api_key": "12345abc"
+      },
+    "openai_api": {
+      "base_url": "model_url",
+      "model_name": "model",
+      "api_key": "YOUR_OPENAI_API_KEY"
+      }
+    }
+}

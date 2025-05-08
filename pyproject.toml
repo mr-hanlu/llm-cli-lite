@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=75.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-cli-lite"
+version = "1.0.0"
+authors = [
+    {name = "mr_hanlu"}
+]
+description = "A lightweight command-line tool that generates terminal commands from natural language"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT License"}
+dependencies = [
+    "openai>=1.77.0",
+    "rich>=14.0.0",
+    "importlib_metadata>=8.5.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License"
+]
+[project.urls]
+Homepage = "https://github.com/mr-hanlu/llm-cli-lite"
+
+[project.scripts]
+llm-cli = "llm_cli_lite.__main__:main"
+
+[tool.setuptools]
+packages = {find = {}}
+
+[tool.setuptools.package-data]
+"llm_cli_lite" = ["config.example.json"]
